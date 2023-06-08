@@ -1,0 +1,16 @@
+% Specify the path to the dataset folder
+datasetPath = 'dataset/';
+
+% Import the train dataset
+trainData = readtable(fullfile(datasetPath, 'train.csv'));
+
+% Import the test dataset
+testData = readtable(fullfile(datasetPath, 'test.csv'));
+
+% Display the first row of the train dataset
+disp('First row of the train dataset:');
+disp(trainData(1,:));
+
+% Display the first row of the test dataset
+disp('First row of the test dataset:');
+disp(testData(1,:));
