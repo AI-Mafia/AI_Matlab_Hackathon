@@ -20,3 +20,7 @@ and return it to the user to be shown on the front-end.
 We managed to build all the individual pieces of this pipeline. Front-end in the app folder, back-end in the server folder and
 the models, including the data preprocessing scripts are in the model folder. Unfortunately, we did not have any time to connect
 all the pieces together.
+
+### Explaining the models
+ - Bodyfat Estimation Model: this model estimates the user's bodyfat taking as input the user's height, weight and age. (in the `model` folder)
+ - Activity Recognition Model: this model estimates what the user does (walking, running, going up/down stairs) based on the sensor data from the user's phone.
