@@ -18,8 +18,7 @@ classifierModels{2} = fitcknn(trainFeatures, trainLabels); % k-Nearest Neighbors
 classifierModels{3} = fitcecoc(trainFeatures, trainLabels); % Error-Correcting Output Codes
 classifierModels{4} = fitcnb(trainFeatures, trainLabels); % Naive Bayes
 classifierModels{5} = fitcecoc(trainFeatures, trainLabels); % Support Vector Machine
-classifierModels{6} = fitcensemble(trainFeatures, trainLabels); % Ensemble Learning
-%classifierModels{7} = fitcdiscr(trainFeatures, trainLabels); % Discriminant Analysis
+classifierModels{6} = fitcdiscr(trainFeatures, trainLabels); % Discriminant Analysis
 
 % Add more classifier models of your choice here
 
