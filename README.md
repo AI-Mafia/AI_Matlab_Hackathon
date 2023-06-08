@@ -11,7 +11,7 @@ expo start
 
 Scan the QR code with your mobile.
 
-### Epectations
+### Expectations
 We built a full-stack mobile application that gets user data from the front-end, including all the needed sensor data.
 The mobile application sends the data to an API on the server and that server runs the different models to get an output
 and return it to the user to be shown on the front-end.
