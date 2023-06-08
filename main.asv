@@ -7,10 +7,26 @@ trainData = readtable(fullfile(datasetPath, 'train.csv'));
 % Import the test dataset
 testData = readtable(fullfile(datasetPath, 'test.csv'));
 
-% Display the first row of the train dataset
-disp('First row of the train dataset:');
-disp(trainData(1,:));
+% Separate the features and labels in the train dataset
+trainFeatures = trainData(:, 1:end-1);
+trainLabels = trainData(:, end);
 
-% Display the first row of the test dataset
-disp('First row of the test dataset:');
-disp(testData(1,:));
+% Train your classifier model (replace this with your own model training code)
+classifierModel = fitctree(trainFeatures, trainLabels);
+
+% Separate the features and labels in the test dataset
+testFeatures = testData(:, 1:end-1);
+testLabels = testData(:, end);
+
+% Convert labels to arrays
+trainLabels = table2array(trainLabels);
+testLabels = table2array(testLabels);
+
+% Use the trained model to predict labels for the test dataset
+predictedLabels = predict(classifierModel, testFeatures);
+
+% Calculate the accuracy
+accuracy = sum(predictedLabels == testLabels) / numel(testLabels) * 100;
+
+% Display the accuracy
+disp(['Accuracy: ' num2str(accuracy)]);
