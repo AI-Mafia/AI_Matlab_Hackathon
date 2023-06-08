@@ -50,3 +50,4 @@ disp(['Average Accuracy: ' num2str(averageAccuracy)]);
 
 % Confusion matrix for the last model
 confusionchart(testLabels, predictedLabels);
+
